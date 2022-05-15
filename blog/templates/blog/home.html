@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-4">Employee List</h2>
+            <table id="example" class="table">
+                <thead>
+                  <tr style="background-color: lightgreen">
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Occupation</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Gender</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for e in employees %}
+                    
+                    <tr>
+                        <th scope="row">{{e.id}}</th>
+                        <td>{{e.name}}</td>
+                        <td>{{e.email}}</td>
+                        <td>{{e.occupation}}</td>
+                        <td>{{e.salary}}</td>
+                        <td>{{e.gender}}</td>          
+                      </tr>
+                    
+                    
+                    {% endfor %}
+                  
+                 
+                </tbody>
+              </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
+
+
+
+
